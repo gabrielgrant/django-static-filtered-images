@@ -1,0 +1,13 @@
+see if some code can be shared with django-stdimage
+
+currently, images will not be re-filtered if the caption field changes
+each filter should have the opportunity to contribute to a "watch list" of fields to observe for changes. if any of those fields change, the filter chain is re-run
+
+south field introspection rules
+
+style options should be:
+cut to fill
+overflow to fill
+fit within
+
+enlarge_if_smaller=True

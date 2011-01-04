@@ -1,0 +1,3 @@
+Installation
+
+put static_filtered_images in your installed apps **before** and apps with models having FilteredImageFields
