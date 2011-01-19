@@ -97,9 +97,7 @@ def run_chain(instance, field):
 	dest_basename, dest_ext = os.path.splitext(os.path.basename(src.path))
 	dest_name = '%s_%s%s'%(dest_basename, fieldname, dest_ext)
 	
-	print tmp_dest_filename
 	f = open(tmp_dest_filename)
-	print f
 	f = File(f, name=dest_name)
 	setattr(instance, fieldname, f)
 
