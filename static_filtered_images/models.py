@@ -1,6 +1,6 @@
 
 from django.db.models.signals import post_save
-from django.contrib import contenttypes
+from django.db.models import get_models
 
 from static_filtered_images.fields import FilteredImageField
 from static_filtered_images.fields import _old_src_field_name
@@ -24,6 +24,6 @@ def register_filtered_image_fields(sender, **kwargs):
 				instance.save()
 	post_save.connect(handler, sender=sender, weak=False)
 
-for ct in contenttypes.models.ContentType.objects.all():
-	register_filtered_image_fields(ct.model_class())
+for m in get_models():
+	register_filtered_image_fields(m)
 
