@@ -13,7 +13,7 @@ def register_filtered_image_fields(sender, **kwargs):
 		return
 	def handler(sender, instance, **kwargs):
 		if kwargs.get('raw', False):
-            return  # bail early: if loading from a fixture, don't run filters
+			return  # bail early: if loading from a fixture, don't run filters
 		for f in fields:
 			old_src_field_name = _old_src_field_name(f.get_attname())
 			old_src = getattr(instance, old_src_field_name)
