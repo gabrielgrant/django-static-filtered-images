@@ -7,6 +7,6 @@ setup(
     packages=['static_filtered_images',],
     license='LGPL',
     long_description=open('README').read(),
-    install_requires=['PIL',],
+    install_requires=['pillow',],
 )
 
